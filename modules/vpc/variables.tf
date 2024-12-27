@@ -5,17 +5,17 @@ variable "environment" {
 
 variable "vpc_cidr" {
   type        = string
-  description = "VPC CIDR block"
+  description = "CIDR block for the VPC"
 }
 
 variable "public_subnets" {
   type        = list(string)
-  description = "List of public subnet CIDR blocks"
+  description = "List of public subnet CIDRs"
 }
 
 variable "private_subnets" {
   type        = list(string)
-  description = "List of private subnet CIDR blocks"
+  description = "List of private subnet CIDRs"
 }
 
 variable "availability_zones" {
@@ -25,6 +25,6 @@ variable "availability_zones" {
 
 variable "tags" {
   type        = map(string)
-  description = "Tags for resources"
+  description = "Tags to apply to resources"
   default     = {}
 }

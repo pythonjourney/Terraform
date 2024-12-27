@@ -1,16 +1,3 @@
-variable "region" {
-  type        = string
-  description = "AWS region"
-  default     = "us-east-1"
-}
-
-variable "environment" {
-  type        = string
-  description = "Environment name"
-
-}
-
-
 variable "ami_id" {
 
     description = "AMI id for the EC2 instance"
@@ -24,9 +11,12 @@ variable "instance_type" {
   
 }
 
-# 
+variable "subnet_id" {
 
-
+    description = "Id of the subnet where EC2 should be launched"
+    type = string
+  
+}
 
 variable "vpc_security_group_ids" {
 
